@@ -27,13 +27,6 @@ for(index=0; index<newColor.length; index+=1){
  }
  click()
 
- const cor = document.getElementsByClassName('color');
-
-    for(let i=0; i < cor.length; i+=1){
-        let corSelecionada = cor[i];
-        console.log(corSelecionada);
-    }
-
  const pixel = () => {
     const palette = document.getElementById('color-palette');
     const selectedColor = palette.getElementsByClassName('color');
@@ -54,6 +47,20 @@ for(index=0; index<newColor.length; index+=1){
             }
         };
 pixel();
+
+const clear = () =>{
+    
+    const myButton = document.querySelector('.clear-button');
+    const color = document.querySelectorAll('.pixel');
+   
+    for(let i=0; i< color.length; i+=1){
+        let div = color[i];
+        myButton.addEventListener('click', ()=>{
+            div.style.backgroundColor = '';
+        })
+    }
+}
+clear ();
 
 
 

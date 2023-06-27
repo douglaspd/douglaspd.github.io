@@ -43,9 +43,6 @@ h1{
     background-color: white;
 }
 
-.clear-button {
-    margin-top: 20px;
-}
 
 .yellow {
     background-color: rgb(161, 161, 37);
@@ -64,5 +61,14 @@ h1{
 
 .selected {
     transform: translateY(-20px);
+}
+.clear-button{
+    margin-top: 20px;
+    background-color: rgb(73, 167, 73);
+    color: rgb(247, 236, 236);
+    width: 80px;
+    height: 50px;
+    font-size: medium;
+    border-bottom: #2fc18c;
 }
  
