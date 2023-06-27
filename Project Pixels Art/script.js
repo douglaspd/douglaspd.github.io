@@ -24,8 +24,15 @@ for(index=0; index<newColor.length; index+=1){
         }
     })
    }
-}
+ }
  click()
+
+ const cor = document.getElementsByClassName('color');
+
+    for(let i=0; i < cor.length; i+=1){
+        let corSelecionada = cor[i];
+        console.log(corSelecionada);
+    }
 
  const pixel = () => {
     const palette = document.getElementById('color-palette');
@@ -45,7 +52,7 @@ for(index=0; index<newColor.length; index+=1){
                    }                 
                 })                     
             }
-}
+        };
 pixel();
 
 
