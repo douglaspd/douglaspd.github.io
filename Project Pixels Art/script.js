@@ -48,7 +48,7 @@ for(index=0; index<newColor.length; index+=1){
         };
 pixel();
 
-const clear = () =>{
+const clear = () => {
     
     const myButton = document.querySelector('.clear-button');
     const color = document.querySelectorAll('.pixel');
@@ -56,11 +56,33 @@ const clear = () =>{
     for(let i=0; i< color.length; i+=1){
         let div = color[i];
         myButton.addEventListener('click', ()=>{
-            div.style.backgroundColor = '';
+            div.style.backgroundColor = 'white';
         })
     }
 }
 clear ();
 
+const randomColor = () => {
 
+    const buttonRandom = document.getElementById('button-random-color');
+    buttonRandom.addEventListener('click', () => {
+
+    const palette = document.getElementById('color-palette');
+    const color = palette.getElementsByClassName('color');
+    const pixelBoard = document.getElementById('pixel-board');
+    const pixel = pixelBoard.getElementsByClassName('pixel');
+    const coresAleatorias= [];
+
+    for( let i = 0; i < color.length ; i+=1){
+        coresAleatorias.push(color[i].style.backgroundColor);
+    }
+    for (let i = 0 ; i < pixel.length; i +=1){
+        let pixels = pixel[i];
+        let corAleatoriaIndex = Math.floor(Math.random() * coresAleatorias.length);
+        pixels.style.backgroundColor = coresAleatorias[corAleatoriaIndex];      
+        }
+     })
+};
+
+randomColor();
 

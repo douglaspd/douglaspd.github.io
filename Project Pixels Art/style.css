@@ -1,4 +1,6 @@
-
+body{
+    background-color: #dfe9e5;
+}
 h1{
     align-items: center;
     margin-left: 200px;
@@ -24,6 +26,7 @@ h1{
     padding: 15px;
     text-align: center;
     justify-content: center;
+    border-radius: 5px;
 
 }
 
@@ -41,6 +44,7 @@ h1{
     height: 40px;
     border: 1px solid black;
     background-color: white;
+    border-radius: 3px;
 }
 
 
@@ -70,5 +74,19 @@ h1{
     height: 50px;
     font-size: medium;
     border-bottom: #2fc18c;
+    border-radius: 10px;
 }
+#button-random-color{
+    margin-top: 40px;
+    margin-left: 400px;
+    background-color: rgb(48, 145, 48);
+    color: rgb(247, 236, 236);
+    width: 100px;
+    height: 60px;
+    font-size: medium;
+    border-bottom: #2fc18c;
+    border-radius: 10px;
+}
+
+
  
