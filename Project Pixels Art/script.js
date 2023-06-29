@@ -86,3 +86,20 @@ const randomColor = () => {
 
 randomColor();
 
+const salvarPixel = () => {
+    const pixel = JSON.parse(localStorage.getItem('desenho')) || [];
+
+    const quadro = document.getElementsByClassName('pixel')
+
+    const desenho = [];
+
+    for( let i=0; i < quadro.length; i+=1){
+        desenho.push(quadro[i].style.backgroundColor);
+        console.log((quadro[i]).style.backgroundColor);
+    }
+    localStorage.setItem('desenho', JSON.stringify(desenho));
+    console.log(desenho);
+};
+
+salvarPixel();
+
