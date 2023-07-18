@@ -1,23 +1,23 @@
 body {
     display: flex;
     width: 1345px;
-    background-color: rgb(248, 253, 252);
+    background-color: rgb(219, 222, 231);
+    
 }
 
 .imagem-perfil {
-    display: flex;
     flex-flow: column-reverse;
     align-items: flex-start;
-    width: 100px;
+    width: 65px;
     height: 50px;
     margin-top: 5px;
 }
 
-.p1 {
+.nome {
     display: flex;
     align-items: center;
     width: 100px;
-    height: 40px;
+    height: 45px;
     margin-left: 5px;
     margin-top: 5px;
 }
@@ -25,18 +25,17 @@ body {
 .cabecalho {
     display: flex;
     width: 800px;
-    flex-flow: column wrap;
-    align-items: flex-end;
+    flex-flow: row;
+    align-items:center;
     align-content: space-between;
-
 }
 
 .im {
     border-radius: 50%;
     display: flex;
     margin-left: 10px;
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
     margin-top: 5px;
     padding-right: 20px;
@@ -50,14 +49,30 @@ header{
     height: 104px;
     color: white;
     background-color: rgb(75, 77, 76);
-    font-size: medium;
-    font-family: cursive;
+
 };
+button{
+   display: flex;
+}
+#button-header {
+    border: 1px blue;   
+    border-radius: 5px;
+    font-size: smaller;
+    font-family: monotype cursive;
+}
+
+#option {
+    background-color: rgb(205, 205, 238);
+    font-family: cursive;
+    font-size: medium;
+    border-radius: 3px;
+    border: 1px blue;
+    color: rgb(53, 42, 42);
+}
 
 h1 {
     color: white;
-    background-color: aquamarine;
-    font-size: medium;
+    font-size: larger;
     font-family: cursive;
 }
 
@@ -72,7 +87,6 @@ h1 {
     align-content: flex-end;
     width: 400px;
 
-    
 }
 
 ul {
@@ -80,7 +94,6 @@ ul {
 }
 
 .paragrafos {
-    width: 300px;
     justify-content:space-between ;
     align-items: center;
     flex-flow: row wrap;
@@ -88,15 +101,54 @@ ul {
 
 footer{
     display: flex;
-    flex-flow: nowrap;
-    justify-content: space-around;
-    align-items: flex-start;
+    width: 1345px;   
 }
 
-.imagem-footer {
+.imagens-footer {
     display: flex;
-    width: 35px;
     height: 35px;
+    margin-right:20px;
+    margin-left: 20px;
+}
+
+.container-footer{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+    body{
+        background-color: rgb(240, 180, 180);
+    }
+    .im {
+        width: 70px;
+        height: 70px;
+        margin-top: 20px;
+        justify-content: flex-end;
+        position: relative;
+    }
+    .container ul {
+       flex-flow: column;
+       align-items: flex-start;
+       
+    }
+    .container-footer {
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+ 
+    }
+    .imagens-footer{
+        margin-right:5px;
+        margin-left: 5px;
+    }
+
+}
+
+label {
+    flex-direction: column;
+    margin: 3px;
 }
 
 
