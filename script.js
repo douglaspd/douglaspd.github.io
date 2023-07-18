@@ -1,19 +1,13 @@
-const verificaValores = (a , b) => {
-    if (typeof a !=='number' ||  typeof b !== 'number') {
-        throw new Error ('Erro! Os valores precisam ser numéricos');
-    }
-}
 
-const sum = (a , b) => {
-    try {
-        verificaValores(a,b);
-        return a + b;
-    }
-    catch (erro) {
-        return erro.message;
-    }
-    
-}
+const AlterarBackgroundColor = () =>{
 
-console.log(sum(5, '3'));
+    const inputColor = document.getElementById ('theme');
+    const themeElement = document.getElementById ('tema');
+
+    inputColor.addEventListener('input', function() {
+        const selectedColor = inputColor.value;
+        themeElement.style.backgroundColor=selectedColor;
+    });
+}
+AlterarBackgroundColor();
 
