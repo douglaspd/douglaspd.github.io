@@ -75,6 +75,10 @@ const darkMode = () =>{
 
 darkMode ()
 
+const removeBebida = (array, remover) => {
+    array.splice(array.indexOf(`${remover}`),1);
+    return array;
+}
 
 
 
