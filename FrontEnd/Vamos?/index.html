@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convite Especial</title>
+    <link rel="stylesheet" href="convite.css">
+</head>
+<body>
+    <div id="container">
+        <h2>Você aceita sair comigo para fazer alguma coisa?</h2>
+        <button id="btn-sim">Sim</button>
+        <button id="btn-nao">Não</button>
+        
+        <!-- Dropdown de Opções -->
+        <div id="dropdown-container">
+            <div class="dropdown-container-options">
+            <label for="bebida">O que vamos beber:</label>
+              <select id="bebida">
+                <option value="Vinho">Vinho</option>
+                <option value="Chopp">Chopp</option>
+                <option value="Cerveja">Cerveja</option>
+              </select>    
+            </div>
+            <div class="dropdown-container-options">
+            <label for="data">Que dia:</label>
+              <select id="data">
+                <option value="31/10/2024">31/10/2024</option>
+                <option value="02/11/2024">02/11/2024</option>
+                <option value="04/11/2024">04/11/2024</option>
+               </select>
+            </div>
+            <div class="dropdown-container-options">
+            <label for="horario">Que horas nos encontramos:</label>
+              <select id="horario">
+                <option value="19:00 hrs">19:00 hrs</option>
+                <option value="20:00 hrs">20:00 hrs</option>
+                <option value="21:00 hrs">21:00 hrs</option>
+              </select>
+            </div>
+            <button id="btn-confirmar">Confirmar</button>
+        </div>
+        <div id="selection-display" class="hidden">
+          <h3>Você escolheu para gente:</h3>
+            <p id="selection-text"></p>
+        <div>
+          <a id="send-whatsapp" href="#" target="_blank">Mandar no WhatsApp</a>
+        </div>
+    </div>
+        <p id="mensagem" class="hidden">Nós vemos em breve!
+            <img id="emoji" src="48516.png" alt="imagem-emoji">
+        </p>
+    </div>
+    
+    <script src="convite.js"></script>
+</body>
+</html>
