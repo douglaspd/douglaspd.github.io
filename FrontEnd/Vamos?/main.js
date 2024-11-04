@@ -1,24 +1,56 @@
-import './style.css'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.js'
+const btnSim = document.getElementById("btn-sim");
+const btnNao = document.getElementById("btn-nao");
+const btnConfirm = document.getElementById("btn-confirmar")
+const dropdownContainer = document.getElementById("dropdown-container");
+const mensagem = document.getElementById("mensagem");
+const selectionDisplay = document.getElementById("selection-display");
+const selectionText = document.getElementById("selection-text");
+const sendWhatsApp = document.getElementById("send-whatsapp");
 
-document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`
+// Evitar clique no botão 'Não'
+btnNao.addEventListener("mouseover", moveButton);
+btnNao.addEventListener("touchstart", moveButton);
 
-setupCounter(document.querySelector('#counter'))
+function moveButton() {
+    const randomX = Math.floor(Math.random() * (window.innerWidth - btnNao.offsetWidth));
+    const randomY = Math.floor(Math.random() * (window.innerHeight - btnNao.offsetHeight));
+    btnNao.style.position = "absolute";
+    btnNao.style.left = randomX + "px";
+    btnNao.style.top = randomY + "px";
+}
+
+// Clique no botão 'Sim' mostra o dropdown
+btnSim.addEventListener("click", function() {
+    dropdownContainer.style.display = "block";
+});
+
+// Exibir mensagem após selecionar todas as opções
+document.getElementById("btn-confirmar").addEventListener("click", function() {
+    mensagem.classList.remove("hidden");
+    dropdownContainer.style.display = "none"
+    btnSim.classList.add("hidden")
+});
+
+btnConfirm.addEventListener('click', function() {
+    const bebida = document.getElementById("bebida").value;
+    const data = document.getElementById("data").value;
+    const horario = document.getElementById("horario").value;
+
+    selectionText.innerHTML = `
+        <p><strong>Vamos beber:</strong> ${bebida}</p>
+        <p><strong>Dia:</strong> ${data}</p>
+        <p><strong>Às:</strong> ${horario}</p>
+    `;
+
+    selectionDisplay.classList.remove("hidden");
+    const numeroWhatsApp = "5511916863793";
+
+    const whatsappMessage = `Olá! Eu escolhi:\nBeber ${bebida}\nDia ${data}\nÀs ${horario}`;
+    const whatsappURL = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(whatsappMessage)}`;
+    sendWhatsApp.setAttribute("href", whatsappURL);
+})
+
+    const whatsappMessage = `Olá! Minha escolha é:\nBebida: ${bebida}\nData: ${data}\nHorário: ${horario}`;
+    const whatsappURL = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(whatsappMessage)}`;
+    sendWhatsApp.setAttribute("href", whatsappURL);
+    sendWhatsApp.setAttribute("target", "_blank");
