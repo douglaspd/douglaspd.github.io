@@ -1,259 +1,180 @@
+/* Reset de estilo básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo da página */
 body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #f3f4f6, #dce1e8);
+    color: #333;
     display: flex;
-    width: 1345px;
-    background-color: rgb(219, 222, 231);
-    
-}
-
-.imagem-perfil {
-    flex-flow: column-reverse;
-    align-items: flex-start;
-    width: 65px;
-    height: 50px;
-    margin-top: 5px;
-}
-
-.nome {
-    display: flex;
+    flex-direction: column;
     align-items: center;
-    width: 100px;
-    height: 45px;
-    margin-left: 5px;
-    margin-top: 5px;
-    font-family: 'ubuntu';
+    margin: 0;
 }
 
-.cabecalho {
-    display: flex;
-    width: 800px;
-    flex-flow: row;
-    align-items:center;
-    align-content: space-between;
-}
-
-.im {
-    border-radius: 50%;
-    display: flex;
-    margin-left: 10px;
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    margin-top: 5px;
-    padding-right: 20px;
-    position: absolute;
-    margin-top: 3px;
-}
-
-header{
-    display: flex;
-    width: 1345px;
-    height: 104px;
+/* Cabeçalho */
+header {
+    width: 100%;
+    max-width: 1200px;
+    padding: 10px 20px;
+    background-color: #050505;
     color: white;
-    background-color: rgb(75, 77, 76);
-    border-radius: 3px;
-
-};
-
-
-button{
-   display: flex;
-}
-#button-header {
-    border: 1px blue;   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     border-radius: 5px;
-    font-size: smaller;
-    font-family: monotype cursive;
+    margin-left: 5px;
     margin-right: 5px;
 }
-#button-header:hover {
-    background-color: rgb(65, 60, 60);
-    border-style: groove;
-    color: white;
-    
-}
 
-#option {
+/* Navegação no cabeçalho */
+header nav ul {
+    list-style: none;
     display: flex;
-    background-color: rgb(205, 205, 238);
-    font-family: cursive;
-    font-size: medium;
-    border-radius: 3px;
-    border: 1px blue;
-    color: white;
-    
-}
-option {
-    display: flex;
-    justify-content: center;
-    color: white;
+    gap: 15px;
+    margin: 0;
 }
 
-h1 {
-    display: flex;
-    color: white;
-    font-size: larger;
-    font-family: 'ubuntu';
-    justify-content: center;
-    align-items: center;
-}
-
-#info-button{
-    width: 300px;
-    border-radius: 5px;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    margin-top: 5px;
-}
-
-.dropdown-content {
-  display: none;
-  width: 275px;
-  position: absolute;
-  background-color: #333;
-  color: white;
-  box-shadow: 0px 8px 16px 0px rgba(110, 92, 92, 0.2);
-  padding: 12px;
-  z-index: 1;
-}
-
-.dropdown.active .dropdown-content {
-    display: block;
-}
-
-aside {
-    width: 400px;
-    justify-content: center;
-    align-items: center;
-    align-self: center;
-}
-
-h3 {
-    color:rgb(99, 97, 212);
-    font-size: medium;
-    font-family: 'ubuntu';
-}
-
-.container{
-    display: flex;
-    
-}
-
-.container ul {
-    display: flex;
-    justify-content: space-around;
-    align-content: flex-end;
-    width: 400px;
-
-}
-
-ul {
+header nav ul li {
     list-style-type: none;
 }
 
-.paragrafos {
-    justify-content:space-between ;
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    background-color: #333;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.nav-link {
+  margin-top: 30px;
+}
+
+/* Seção de apresentação */
+section {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    flex-flow: row wrap;
+    justify-content: center;
+    height: calc(100vh - 104px);
+    text-align: center;
+    padding: 20px;
 }
 
-footer{
-    display: flex;
-    width: 1345px;   
+.container {
+    text-align: left;
+    margin-top: 50px; /* Define alinhamento à esquerda para todos os textos da div */
 }
 
-.imagens-footer {
-    display: flex;
-    height: 35px;
-    margin-right:20px;
-    margin-left: 20px;
+.container h1,
+.container h2,
+.container h3,
+.container p {
+    margin: 10px 0; /* Adiciona espaçamento entre os elementos */
 }
 
-.container-footer{
-    display: flex;
+.container h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.container h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #050505;
+}
+
+.container h3 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.container p {
+    font-size: 1.2em;
+    max-width: 800px;
+    color: #444;
+}
+
+/* Footer */
+footer {
     width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    display: flex;
     justify-content: center;
 }
 
+.main_footer {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    position: fixed;
+    bottom: 5px;
+}
+
+.footer-img {
+  width: 35px;
+  height: 35px;
+  transition: transform 0.3s;
+}
+
+.footer-img:hover {
+    transform: scale(1.2);
+}
+
+/* Responsividade */
 @media screen and (max-width: 768px) {
-    body{
-        background-color: rgb(240, 180, 180);
-    }
-    .im {
-        width: 70px;
-        height: 70px;
-        margin-top: 20px;
-        justify-content: flex-end;
-        position: relative;
-    }
-    .container ul {
-       flex-flow: column;
-       align-items: flex-start;
-       
-    }
-    .container-footer {
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: flex-start;
- 
-    }
-    .imagens-footer{
-        margin-right:5px;
-        margin-left: 5px;
+    header nav ul {
+        flex-direction: column;
+        gap: 10px;
     }
 
+    header {
+      margin-left: 3px;
+      margin-right: 3px;
+    }
+
+    section {
+        height: auto;
+        padding: 40px 20px;
+    }
+
+    .container h1 {
+        font-size: 2em;
+    }
+
+    .container h2 {
+        font-size: 1.5em;
+    }
+
+    .container h3 {
+        font-size: 1.2em;
+    }
+
+    .container p {
+        font-size: 1em;
+    }
 }
 
-label {
-    display: inline-block;
-}
-
-.tema-color{
-    display: flex;
-    width: 550px;
-    flex-flow: column;
-    justify-content:space-between;
-    align-items:flex-end;
-    padding: 10px 10px;
-
-
-}
-#theme{
+.profile-pic img {
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
-    width: 25px;
-    height: 25px;
-    background-color: rgb(75, 76, 77) ;
 }
-#tema {
-    border-radius: 50%;
-    width: 25px;
-    height: 25px;
-    background-color: rgb(75, 76, 77) ;
-
-}
-
-#cadastro {
-    display: flex;
-    padding: 10px;
-}
-
-#dark-mode {
-    padding: 10px 10px;
-    font-size: 14px;
-    background-color: #050505;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-
-}
-.dark-mode{
-    background-color: #333;
-    color: #fff;
-}
-
-
-
-
-
-
