@@ -8,7 +8,7 @@
 /* Corpo da página */
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #f3f4f6, #dce1e8);
+    background-color: #f9f9f9;
     color: #333;
     display: flex;
     flex-direction: column;
@@ -66,15 +66,40 @@ header nav ul li a:hover {
   margin-top: 30px;
 }
 
+.nav-link ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.nav-link ul li a:hover {
+    color: #003366;
+}
+
+.nav-link ul li a {
+    text-decoration: none;
+    color: #0056b3;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
 /* Seção de apresentação */
 section {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: calc(100vh - 104px);
+    height: auto;
     text-align: center;
     padding: 20px;
+}
+
+
+.section {
+    padding: 40px 20px;
+    text-align: center;
 }
 
 .container {
@@ -125,7 +150,7 @@ footer {
     display: flex;
     gap: 15px;
     justify-content: center;
-    position: fixed;
+    position: relative;
     bottom: 5px;
 }
 
@@ -171,10 +196,67 @@ footer {
     .container p {
         font-size: 1em;
     }
+
+    .profile-pic img {
+      margin-top: 50px;
+    }
+    .container-skills {
+      flex-direction: column;
+      align-items: center;
+    }
 }
 
 .profile-pic img {
     width: 50px;
     height: 50px;
     border-radius: 50%;
+}
+
+.profile-picture {
+    width: 190px;
+    height: 240px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    border: 3px solid #0056b3;
+}
+
+.skill {
+    font-weight: bold;
+    color: #004d40;
+    background-color: #b2dfdb;
+    padding: 8px 15px;
+    border-radius: 5px;
+    width: 100%;
+    text-align: center;
+}
+
+.container-skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px;
+}
+
+.skills-container, #softskills div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+#softskills, #hardskills {
+    background-color: #e0f7fa;
+    border: 1px solid #00796b;
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;
+}
+
+.about-content p {
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+    text-align: start;
+    margin-top: 10px;
 }

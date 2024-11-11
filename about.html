@@ -4,32 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header id="header">
-    <div>
-      <nav>
+    <div class="header-container">
+
+      <nav class="nav-link">
         <ul>
-            <li><a href="about.html">Sobre Mim</a></li>
-            <li><a href="projects.html">Projetos</a></li>
-            <li><a href="#contact">Contato</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">Sobre Mim / About</a></li>
+            <li><a href="projects.html">Projetos / Projects</a></li>
+            <li><a href="contact.html">Contato / Contact</a></li>
         </ul>
-      </nav>   
+      </nav>
     </div>
     </header>
     <!-- Sobre Mim -->
     <section id="about" class="section">
-        <h2>Sobre Mim</h2>
+       <img class="profile-picture" src="perfil.jpeg" alt="Foto do Perfil"> 
+        <h2>Um pouco sobre mim</h2>
         <div class="about-content">
-            <img src="assets/img/profile.jpg" alt="Foto do Perfil">
-            <p>Sou desenvolvedor com experiência em desenvolvimento de aplicações backend e frontend. Paixão por solucionar problemas e criar soluções de alta qualidade.</p>
-            <p></p>
+            <p>Sou desenvolvedor web especializado em soluções backend e frontend, com forte habilidade em transformar ideias complexas em experiências digitais funcionais e intuitivas. Tenho experiência em tecnologias como Python, JavaScript, e frameworks como Django e React, que utilizo para criar projetos com foco em desempenho e qualidade.</p>
+            <p>Estou sempre em busca de aperfeiçoamento técnico e gosto de trabalhar em equipe para criar produtos que realmente impactem os usuários. Meu objetivo é crescer em uma empresa que valorize inovação, aprendizado contínuo e colaboração.</p>
         </div>
     </section>
-
-    <!-- Habilidades -->
-    <section id="skills" class="section">
+    <!-- Hard Skills -->
+    <div class="container-skills">
+      <section id="hardskills" class="section">
         <h2>Hard Skills</h2>
         <div class="skills-container">
             <div class="skill">Python</div>
@@ -39,38 +41,38 @@
             <div class="skill">React</div>
             <!-- Adicione mais habilidades conforme necessário -->
         </div>
-    </section>
-
-    <!-- Projetos -->
-    <section id="projects" class="section">
-        <h2>Projetos</h2>
-        <div class="projects-container">
-            <!-- Backend Projects -->
-            <h3>Backend</h3>
-            <div class="project-card">
-                <h4>Projeto API REST</h4>
-                <p>Descrição breve do projeto. Tecnologias: Django, PostgreSQL.</p>
-                <a href="https://github.com/usuario/projeto1" target="_blank">Ver no GitHub</a>
-            </div>
-            <!-- Frontend Projects -->
-            <h3>Frontend</h3>
-            <div class="project-card">
-                <h4>Projeto Frontend</h4>
-                <p>Descrição breve do projeto. Tecnologias: React, CSS.</p>
-                <a href="https://github.com/usuario/projeto2" target="_blank">Ver no GitHub</a>
-            </div>
+      </section>
+    <!-- Soft Skills -->
+    <section id="softskills" class="section">
+      <h2>Soft Skills</h2>
+        <div>
+          <div class="skill">Organização</div>
+          <div class="skill">Comprometimento</div>
+          <div class="skill">Trabalho em equipe</div>
+          <div class="skill">Bom relacionamento interpessoal</div>
+          <div class="skill">Disciplina</div>
         </div>
     </section>
-
-    <!-- Contato -->
-    <section id="contact" class="section">
-        <h2>Contato</h2>
-        <p>Entre em contato por redes sociais ou envie um email diretamente.</p>
-        <div class="contact-links">
-            <a href="https://linkedin.com/in/douglaspd" target="_blank">LinkedIn</a>
-            <a href="mailto:douglaspaivadomingues@gmail.com">Email</a>
+    </div>
+    <footer>
+        <div class="main_footer">
+          <div class="linkedin_footer">
+            <a href="https://www.linkedin.com/in/douglaspd/">
+              <img class="footer-img" src="linkedin2.webp" alt="linkedin">  
+            </a>
+          </div>
+          <div class="github_footer">
+            <a href="https://github.com/douglaspd">
+              <img class="footer-img" src="public/git.png" alt="github">
+            </a>
+          </div>
+          <div>
+            <a href="douglaspaivadomingues@gmail.com">
+              <img class="footer-img" src="public/gmail.png" alt="gmail">
+            </a>
+          </div>
         </div>
-    </section>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
