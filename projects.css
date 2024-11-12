@@ -16,9 +16,20 @@
     padding: 15px;
     width: 250px;
     max-width: 300px;
-    text-align: center;
+    text-align:center;
     box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
+    margin-left: 10px;
+}
+
+.projects-frontend {
+  display: flex;
+  padding: 10px;
+  flex-direction: row;
+}
+
+.project-card p {
+  text-align: start;
 }
 
 /* Hover no card */
@@ -33,6 +44,7 @@
     font-weight: bold;
     color: #00244d;
     margin-bottom: 10px;
+    text-align: center;
 }
 
 /* Descrição do projeto */
