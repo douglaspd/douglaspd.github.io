@@ -222,8 +222,8 @@ footer {
 
 .skill {
     font-weight: bold;
-    color: #004d40;
-    background-color: #b2dfdb;
+    color: #00244d;
+    background-color: #b2b5df;
     padding: 8px 15px;
     border-radius: 5px;
     width: 100%;
@@ -246,8 +246,8 @@ footer {
 }
 
 #softskills, #hardskills {
-    background-color: #e0f7fa;
-    border: 1px solid #00796b;
+    background-color: #e0f0fa;
+    border: 1px solid #004979;
     border-radius: 10px;
     padding: 20px;
     width: 250px;
