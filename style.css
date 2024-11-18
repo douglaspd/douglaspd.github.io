@@ -164,6 +164,18 @@ footer {
     transform: scale(1.2);
 }
 
+.projects-frontend {
+  display: flex;
+  padding: 10px;
+  flex-direction: row;
+}
+
+.projects-backend {
+  display: flex;
+  padding: 10px;
+  flex-direction: row;
+}
+
 /* Responsividade */
 @media screen and (max-width: 768px) {
     header nav ul {
@@ -203,6 +215,10 @@ footer {
     .container-skills {
       flex-direction: column;
       align-items: center;
+    }
+    .projects-backend, .projects-frontend {
+      flex-direction: column;
+      margin-top: 10px;
     }
 }
 

@@ -16,3 +16,21 @@ window.addEventListener('click', function(event) {
     }
 });
 
+function adjustSpacing() {
+  const projectCards = document.querySelectorAll('.project-card');
+  
+  if (window.innerWidth < 768) {
+    projectCards.forEach((card) => {
+      card.style.marginBottom = '20px'; // Ajuste o valor conforme necessário
+    });
+  } else {
+    projectCards.forEach((card) => {
+      card.style.marginBottom = '0'; // Remove o espaçamento extra em telas maiores
+    });
+  }
+}
+
+adjustSpacing();
+
+window.addEventListener('resize', adjustSpacing);
+
